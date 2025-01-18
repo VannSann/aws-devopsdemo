@@ -7,6 +7,7 @@ phases:
       - echo Build started on `date`
       #- sed -i 's/aaaaaa/${CODEARTIFACT_AUTH_TOKEN}'/g settings.xml
       - mvn -s settings.xml clean install
+      - mvn clean deploy
   post_build:
     commands:
       - echo Build completed on `date`
